@@ -27,4 +27,13 @@ class TestGame < Minitest::Test
     assert_equal([2,6], @game.indexs_of_correct_guess("a") )
   end
 
+  def test_update_answers_so_far()
+    @game.update_answers_so_far("a")
+    assert_equal(["_", "_", "a", "_", "/", "_", "a", "_", "_"], @game.answer_so_far )
+  end
+
+  def test_next_turn()
+    assert_equal("a", @game.next_turn())
+  end
+
 end
