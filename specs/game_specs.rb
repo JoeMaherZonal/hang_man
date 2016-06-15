@@ -36,4 +36,7 @@ class TestGame < Minitest::Test
     assert_equal("a", @game.next_turn())
   end
 
+  def test_display_answers_so_far
+    assert_equal("_ _ _ _ / _ _ _ _", @game.display_answers_so_far)
+  end
 end

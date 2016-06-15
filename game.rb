@@ -56,6 +56,10 @@ class Game
   end
 
 # game starts here
+  def display_answers_so_far()
+    return @answer_so_far.join(" ")
+  end
+
 
   def next_turn()
     puts "Enter your guess"
