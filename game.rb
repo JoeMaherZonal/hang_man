@@ -24,4 +24,14 @@ class Game
     @answer_so_far = altered_array
   end
 
+  def is_guess_correct(guess)
+    guess_correct = false
+    split_phrase = split_phrase()
+
+    for letter in split_phrase
+      return true if letter == guess
+    end
+    return false
+  end
+
 end
