@@ -52,7 +52,13 @@ class Game
     for index in index_array
       @answer_so_far[index] = guess
     end
+  end
 
+  def is_game_won
+    for space in @answer_so_far
+      return false if space == "_"
+    end
+    return true
   end
 
 # game starts here
