@@ -34,4 +34,16 @@ class Game
     return false
   end
 
+  def indexs_of_correct_guess(guess)
+    split_phrase = split_phrase()
+    index_array = []
+    counter = 0
+    for letter in split_phrase
+      #index = split_phrase.index(letter)
+      index_array << counter if letter == guess
+      counter += 1
+    end
+    return index_array
+  end
+
 end

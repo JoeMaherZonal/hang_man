@@ -23,4 +23,8 @@ class TestGame < Minitest::Test
     assert_equal(false, @game.is_guess_correct("b"))
   end
 
+  def test_return_index_number_of_correct_guess()
+    assert_equal([2,6], @game.indexs_of_correct_guess("a") )
+  end
+
 end
